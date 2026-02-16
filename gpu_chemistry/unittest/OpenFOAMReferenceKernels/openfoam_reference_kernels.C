@@ -16,7 +16,7 @@ TestData::constantResults constants() {
     ret.RR     = Foam::constant::thermodynamic::RR;
     ret.Pstd   = Foam::constant::thermodynamic::Pstd;
     ret.Tstd   = Foam::constant::thermodynamic::Tstd;
-    ret.NA     = Foam::constant::physicoChemical::NA.value();
+    ret.NNA    = Foam::constant::physicoChemical::NNA.value();
     ret.k      = Foam::constant::physicoChemical::k.value();
     ret.vGreat = Foam::vGreat;
     ret.vSmall = Foam::vSmall;

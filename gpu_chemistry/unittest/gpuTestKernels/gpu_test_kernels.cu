@@ -90,7 +90,7 @@ TestData::constantResults constants(){
     ret.RR = eval([] DEVICE (){return gpuRR;});
     ret.Pstd = eval([] DEVICE (){return gpuPstd;});
     ret.Tstd = eval([] DEVICE (){return gpuTstd;});
-    ret.NA = eval([] DEVICE (){return gpuNA;});
+    ret.NNA = eval([] DEVICE (){return gpuNNA;});
     ret.k = eval([] DEVICE (){return gpuk;});
     ret.vGreat = eval([] DEVICE (){return gpuVGreat;});
     ret.vSmall = eval([] DEVICE (){return gpuVSmall;});
