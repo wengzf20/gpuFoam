@@ -32,5 +32,5 @@ unit-test-job:
     - cp -r build/bin/. $FOAM_USER_APPBIN
     - cp -r build/lib/. $FOAM_USER_LIBBIN
   script:
-    - Test-gpuChemistry [CPU]
+    - Test-gpuChemistry
     - echo "Tests done."
