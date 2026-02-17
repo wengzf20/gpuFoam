@@ -10,7 +10,7 @@ struct constantResults{
     gScalar RR;
     gScalar Pstd;
     gScalar Tstd;
-    gScalar NA;
+    gScalar NNA;
     gScalar k;
     gScalar vGreat;
     gScalar vSmall;

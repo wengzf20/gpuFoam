@@ -30,7 +30,7 @@ TEST_CASE("Test gpuConstants (on CPU)", "[CPU]")
         CHECK(test_result.RR == reference.RR);
         CHECK(test_result.Pstd == reference.Pstd);
         CHECK(test_result.Tstd == reference.Tstd);
-        CHECK(test_result.NA == reference.NA);
+        CHECK(test_result.NNA == reference.NNA);
         CHECK(test_result.k == reference.k);
 
     }
@@ -55,7 +55,7 @@ TEST_CASE("Test gpuConstants (on GPU)", "[GPU]")
         CHECK(test_result.RR == reference.RR);
         CHECK(test_result.Pstd == reference.Pstd);
         CHECK(test_result.Tstd == reference.Tstd);
-        CHECK(test_result.NA == reference.NA);
+        CHECK(test_result.NNA == reference.NNA);
         CHECK(test_result.k == reference.k);
 
     }

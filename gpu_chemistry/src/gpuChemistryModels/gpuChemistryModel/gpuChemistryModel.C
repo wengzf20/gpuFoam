@@ -64,7 +64,7 @@ FoamGpu::GpuKernelEvaluator gpuChemistryModel<cpuThermoType>::makeEvaluator(
     auto gpu_thermos =
         FoamGpu::makeGpuThermos(mixture.specieThermos(), physicalProperties);
     auto gpu_reactions = FoamGpu::makeGpuReactions(
-        mixture.specieNames(), chemistryProperties, gpu_thermos, reactions);
+        mixture.species(), chemistryProperties, gpu_thermos, reactions);
 
     return FoamGpu::GpuKernelEvaluator(
         nCells,
@@ -82,7 +82,7 @@ gpuChemistryModel<cpuThermoType>::gpuChemistryModel(const fluidMulticomponentThe
     , mixture_(dynamicCast<const multicomponentMixture<cpuThermoType>>(
           this->thermo()))
     , specieThermos_(mixture_.specieThermos())
-    , reactions_(mixture_.specieNames(), specieThermos_, this->mesh(), *this)
+    , reactions_(mixture_.species(), specieThermos_, this->mesh(), *this)
     , RR_(this->thermo().Y().size())
     , evaluator_(makeEvaluator(
           nCells(),
